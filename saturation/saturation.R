@@ -65,7 +65,7 @@ print(mwt)
 sink()
 
 ##plot results	
-##predict  values fo no linear phase
+##predict  values for non linear phase
 ss$predrare[(snap+1): dim(ss)[1]]<-predict(fitrare)
 ss$predhype[(snap+1): dim(ss)[1]]<-predict(fithype)
 
