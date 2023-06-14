@@ -9,6 +9,6 @@ Biological Reviews 87(4), 991-1041
 Simulation and Gower distances: cite https://doi.org/10.1093/sysbio/syu022
 Integrating Incomplete Fossils by Isolating Conflicting Signal in Saturated and Non-Independent Morphological Characters
 Liliana M. Dávalos, Paúl M. Velazco, Omar M. Warsi, Peter D. Smits, Nancy B. Simmons 
-Systematic Biology, Volume 63, Issue 4, July 2014, Pages 582–600
+Systematic Biology, Volume 63, Issue 4, July 2014, 582–600
 
 Running dissimilarity_morphology.R requires running simulation_morphology.R first. 
