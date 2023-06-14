@@ -29,6 +29,7 @@ eachdist<-apply(morp, 2, dist, simplify=F)
 
 ##turn distance matrices between species into vectors in a dataframe
 ##characters are now comparable across one another
+##insight from Nicole Gerardo
 newchar<-sapply(eachdist,function(eachdist) as.vector(eachdist))
 
 ##transpose so characters are in rows and make into a dataframe
