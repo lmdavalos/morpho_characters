@@ -3,7 +3,7 @@ Long overdue scripts for analyzing morphological characters
 
 Saturation: cite https://doi.org/10.1111/j.1469-185X.2012.00240.x
 Understanding phylogenetic incongruence: lessons from phyllostomid bats.
-Liliana M. Dávalos, Andrea L. Cirranello*, Jonathan H. Geisler, Nancy B. Simmons 
+Liliana M. Dávalos, Andrea L. Cirranello, Jonathan H. Geisler, Nancy B. Simmons 
 Biological Reviews 87(4), 991-1041
 
 Simulation and Gower distances: cite https://doi.org/10.1093/sysbio/syu022
