@@ -13,6 +13,8 @@ library(reldist)
 library(reshape2)
 library(ape)
 library(readxl)
+##works better with factors
+library(StatMatch)
 
 ##this is a character state matrix formatted so states can be read
 ##no multistate, missing data as blank
@@ -38,23 +40,18 @@ newchar<-as.data.frame(t(newchar))
 
 ##calculate Gower distances for real data
 newdist<-daisy(newchar, metric= "gower")
-
-##read in variable molecular data
-##this has been formatted to be numbers
-matm <-read.csv("variable.csv")
+                
+##read in variable tab-separated molecular data
+matm <-read.table("variable.txt", sep="\t")
 
 ##remove the species names
-matm1<-matm[,2:4602]
-
-##make into factors
-##deprecated indicate in daisy command
-#matm1<-as.data.frame(apply(matm1,2,function(matm1) as.factor(matm1)))
+matm1<-matm[,2:dim(matm)[2]]
 
 ##transpose matrix
 matm1<-as.data.frame(t(matm1))
 
-##calculate distance from factors
-moldist<-daisy(matm1, metric = "gower", type = list(factor = seq(1: dim(matm1)[2] )))
+##calculate distance between rows, as in daisy
+moldist<-gower.dist(matm1)
 
 ##create a vector of labels
 label<-c(rep("molecular",length(moldist)),rep("morphology",length(newdist)))
