@@ -39,7 +39,7 @@ newchar<-sapply(eachdist,function(eachdist) as.vector(eachdist))
 newchar<-as.data.frame(t(newchar))
 
 ##calculate Gower distances for real data
-newdist<-daisy(newchar, metric= "gower")
+newdist<-gower.dist(newchar)
                 
 ##read in variable tab-separated molecular data
 matm <-read.table("variable.txt", sep="\t")
