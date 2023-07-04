@@ -41,7 +41,7 @@ snap<-as.integer(round(fitseg$psi[2]))
 fitrar<-nls(state~rare(step,a), data=subset(ss,step>snap),start =c(a=100))
 
 ##fit hypergeometric function after break
-fithyp<-nls(state~hype(step,b,c), data=subset(ss,step>snap),start =c(b=0.1,c=1))
+fithyp<-nls(state~hype(step,b,c), data=subset(ss,step>snap),start =c(b=.1,c=1))
 
 ##make comparable linear fit
 fitlin<-lm(state~step,data=subset(ss,step>snap))
@@ -51,9 +51,9 @@ sink("fit_comparisons.txt")
 print("AIC linear")
 print(AIC(fitlin))
 print("AIC rarefaction")
-print(AIC(fitrare))
+print(AIC(fitrar))
 print("AIC hypergeometric")
-print(AIC(fithype))
+print(AIC(fithyp))
 sink()
 
 ##rank test for step category being equal rank after linear phase
@@ -66,8 +66,8 @@ sink()
 
 ##plot results	
 ##predict  values for non linear phase
-ss$predrare[(snap+1): dim(ss)[1]]<-predict(fitrare)
-ss$predhype[(snap+1): dim(ss)[1]]<-predict(fithype)
+ss$predrare[(snap+1): dim(ss)[1]]<-predict(fitrar)
+ss$predhype[(snap+1): dim(ss)[1]]<-predict(fithyp)
 
 ##pull together observed and modeled
 y<-c(ss$state,ss$predrare,ss$predhype)
