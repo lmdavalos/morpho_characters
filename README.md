@@ -11,6 +11,8 @@ Integrating Incomplete Fossils by Isolating Conflicting Signal in Saturated and 
 Liliana M. Dávalos, Paúl M. Velazco, Omar M. Warsi, Peter D. Smits, Nancy B. Simmons 
 Systematic Biology, Volume 63, Issue 4, July 2014, 582–600
 
+Gower distances:
+
 Running dissimilarity_morphology.R requires running simulation_morphology.R first. 
 
 Statistical scaffold:
