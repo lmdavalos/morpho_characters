@@ -1,0 +1,9 @@
+DNA,mitcod12 = 1 - 1198
+DNA,mitcod3 = 1199 - 1797
+DNA,loops = 1798 - 3497
+DNA,stems = 3498 - 4600
+DNA,nucint = 4601 - 6606
+DNA,nuccod1 = 6607 - 7796
+DNA,nuccod2 = 7797 - 8985
+DNA,nuccod3 = 8986 - 10173
+MULTI,morph = 10174 - 10451

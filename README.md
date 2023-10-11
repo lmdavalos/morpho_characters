@@ -11,4 +11,10 @@ Integrating Incomplete Fossils by Isolating Conflicting Signal in Saturated and 
 Liliana M. Dávalos, Paúl M. Velazco, Omar M. Warsi, Peter D. Smits, Nancy B. Simmons 
 Systematic Biology, Volume 63, Issue 4, July 2014, 582–600
 
-Running dissimilarity_morphology.R requires running simulation_morphology.R first. Running rax_scaffold.pl requires a morphology file, outgroup specification, and a list of posterior molecular trees.
+Running dissimilarity_morphology.R requires running simulation_morphology.R first. 
+
+Statistical scaffold:
+
+Step 1: Running rax_scaffold.pl estimates backbone constrained morphological trees and requires a morphology character file, outgroup specification, and a file with Newick sample of molecular trees. 
+
+Step 2: Running rax_mulopt.pl estimates branch lengths from both morphological and molecular data on backbone constrained morphological trees (from step 1) and requires a combined morphology and molecular character file, outgroup specification, a partition file, and a file with Newick set of best trees obtained in the step 1.
